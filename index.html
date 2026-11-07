@@ -72,6 +72,45 @@ nav.tabs button[data-tab^="v14"]{min-height:44px}
 
 /* v1.6 responsive town board */
 .v16-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px;margin:14px 0}.v16-card{border:1px solid var(--line,#d9d0c5);background:var(--panel,#fffdf8);border-radius:14px;padding:14px;overflow-wrap:anywhere}.v16-card h3{margin:0 0 8px}.v16-card p{line-height:1.6}.v16-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.v16-actions button{min-height:48px;flex:1 1 140px;white-space:normal;touch-action:manipulation}.v16-chip{display:inline-block;border-radius:99px;padding:4px 10px;background:rgba(150,120,180,.12);margin:4px 4px 4px 0}.v16-muted{opacity:.8}.v16-focus:focus-visible,.v16-actions button:focus-visible{outline:3px solid #8063aa;outline-offset:3px}@media(max-width:640px){.v16-grid{grid-template-columns:1fr}.v16-actions button{flex-basis:100%}header.top{flex-wrap:wrap}main.layout{min-width:0}}@media(prefers-reduced-motion:reduce){.v16-card *{animation:none!important;transition:none!important}}
+
+/* v3.7: 별도 타이틀 / 시네마틱 도입 이벤트 */
+#v37gate{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow-y:auto;padding:20px;background:radial-gradient(ellipse at 70% 20%,#a58b9c 0%,#453c50 52%,#211e2c 100%);color:#fff;font-family:system-ui,'Malgun Gothic',sans-serif}
+#v37gate[hidden]{display:none!important}#v37gate *{box-sizing:border-box}
+.v37frame{width:min(920px,100%);min-height:min(660px,calc(100vh - 40px));position:relative;isolation:isolate;overflow:hidden;border:1px solid #ffffff55;border-radius:26px;background:linear-gradient(160deg,#57465755,#302b3bdf);box-shadow:0 25px 90px #15101e88;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,5vw,54px)}
+.v37frame:before{content:'';position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 76% 23%,#ffe4b0 0 7%,#e7a97d66 7.5% 13%,transparent 14%),linear-gradient(170deg,transparent 47%,#d2b2a7 48% 54%,#9e8899 55% 66%,#52465c 67%)}
+.v37frame:after{content:'';position:absolute;bottom:-35px;right:-28px;width:62%;height:46%;z-index:-1;opacity:.72;background:repeating-linear-gradient(90deg,transparent 0 37px,#292838 38px 41px,transparent 42px 73px),linear-gradient(0deg,#242638 0 17%,transparent 18%);clip-path:polygon(0 70%,10% 40%,23% 60%,34% 24%,44% 51%,60% 18%,77% 39%,90% 12%,100% 33%,100% 100%,0 100%)}
+.v37eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#ffe5d5;font-weight:750}.v37brand{font-family:Georgia,serif;font-size:clamp(46px,9vw,88px);letter-spacing:-.055em;line-height:1.02;margin:20px 0 12px;text-shadow:0 5px 25px #0005}.v37brand span{color:#f4c7d6}.v37subtitle{font-size:clamp(15px,2.6vw,20px);color:#fff1e6;line-height:1.8;max-width:550px}.v37actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.v37actions button{min-height:50px;border-radius:13px;border:1px solid #ffe9db88;padding:13px 24px;background:#fff0e8;color:#403345;font-weight:800;box-shadow:0 4px 15px #0002}.v37actions button.secondary{background:#342b42b8;color:#fff}.v37actions button:disabled{opacity:.45;cursor:not-allowed}.v37actions button:focus-visible{outline:3px solid #fff;outline-offset:3px}.v37footer{font-size:12px;color:#f4e1d6;line-height:1.7;margin-top:28px}.v37scene{max-width:660px}.v37scene h2{font-family:Georgia,'Malgun Gothic',serif;font-size:clamp(26px,4.5vw,43px);line-height:1.3;margin:12px 0 25px}.v37scene p{font-size:clamp(16px,2.4vw,19px);line-height:2;white-space:pre-line;color:#fff7f1;min-height:155px}.v37progress{display:flex;gap:7px;margin:18px 0}.v37progress i{width:32px;height:4px;border-radius:4px;background:#ffffff55}.v37progress i.active{background:#ffe2bf}.v37frame.scene-mode:before{filter:brightness(.62)}
+@media(max-width:600px){#v37gate{padding:0}.v37frame{border-radius:0;min-height:100dvh;padding:28px 23px 40px}.v37actions{flex-direction:column}.v37actions button{width:100%;min-height:52px}.v37footer{font-size:11px}}
+
+/* v4.1 - playable clinic interior; all art is CSS, no external assets */
+.v41-room{position:relative;isolation:isolate;overflow:hidden;min-height:300px;border-radius:22px;background:linear-gradient(180deg,#d9c5c7,#f8e9d6 68%,#b99e89 69%,#ad8a76);border:1px solid #a98f9a;box-shadow:inset 0 0 65px #4b354622}
+.v41-room:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 76% 26%,#fff5d499,transparent 35%);z-index:1}
+.v41-room.phase-1{background:linear-gradient(180deg,#d8b6b0,#f4d3b4 68%,#ae8c75 69%,#a47d68)}
+.v41-room.phase-2{background:linear-gradient(180deg,#a987aa,#d5b1ab 68%,#977b80 69%,#8e7070)}
+.v41-room.phase-3{background:linear-gradient(180deg,#373c60,#66647b 68%,#68546c 69%,#594c60)}
+.v41-window{position:absolute;right:8%;top:12%;width:27%;height:49%;border:9px solid #866a6a;border-radius:55px 55px 5px 5px;background:linear-gradient(175deg,#e3d2ce,#f5e5c7 47%,#d2b3a3 48%,#e9d8c4);box-shadow:0 4px 0 #70585a;overflow:hidden}
+.v41-window:before{content:'';position:absolute;top:0;bottom:0;left:48%;border-left:6px solid #8a6b68}
+.v41-window:after{content:'';position:absolute;top:47%;left:0;right:0;border-top:5px solid #8a6b68}
+.phase-3 .v41-window{background:linear-gradient(#333d62,#80768b 65%,#a5909b)}
+.v41-shelf{position:absolute;left:7%;top:17%;width:22%;height:39%;border:7px solid #866c68;border-radius:5px;background:repeating-linear-gradient(0deg,#a88876 0 7px,#f2d8bf 8px 42px,#a88876 43px 49px)}
+.v41-shelf:after{content:'✚  ▤  ⚕';position:absolute;inset:20% 0 0;text-align:center;color:#695c6c;font-size:24px;letter-spacing:9px}
+.v41-desk{position:absolute;bottom:4%;left:19%;width:64%;height:26%;background:linear-gradient(#9e7269 0 22%,#75575b 23% 100%);border-radius:12px 12px 5px 5px;box-shadow:0 7px 0 #684d50;z-index:3}
+.v41-desk:after{content:'▤  ✎';position:absolute;top:7%;left:38%;color:#f6e4d6;font-size:22px}
+.v41-visitor{position:absolute;bottom:20%;left:43%;width:72px;height:115px;z-index:2;filter:drop-shadow(0 5px 6px #382b3c44);animation:v41appear .65s ease-out both}
+.v41-visitor:before{content:'';position:absolute;left:19px;top:3px;width:38px;height:39px;border-radius:50%;background:#edc8ae;box-shadow:0 -8px 0 #6a5051}
+.v41-visitor:after{content:'';position:absolute;left:7px;top:42px;width:62px;height:68px;border-radius:24px 24px 8px 8px;background:#817b8b}
+.v41-caption{position:absolute;left:14px;top:12px;z-index:4;background:#fff8efdd;color:#514051;border-radius:12px;padding:7px 12px;font-size:12px;font-weight:700}
+.v41-scene{margin:12px 0;padding:18px;border-radius:18px;background:#fff8f0;border:1px solid #e2cfc8;color:#493a4b}
+.v41-scene h3{margin:0 0 8px;color:#65445f;font-size:1.12rem}
+.v41-dialogue{line-height:1.75;white-space:pre-line;min-height:66px}
+.v41-controls{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.v41-controls button{min-height:46px;flex:1 1 155px;white-space:normal}
+.v41-compact{margin-top:8px;color:#6b5869;font-size:.88rem}
+.v41-dock{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.v41-dock button{flex:1 1 130px;min-height:46px}
+@keyframes v41appear{from{opacity:0;transform:translateX(14px) scale(.96)}to{opacity:1;transform:none}}
+@media(max-width:520px){.v41-room{min-height:230px}.v41-visitor{left:39%;transform:scale(.82);transform-origin:bottom}.v41-scene{padding:14px}.v41-controls button{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){.v41-visitor{animation:none!important}}
 </style><style>
 .v17-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,275px),1fr));gap:12px;margin:12px 0}.v17-card{border:1px solid var(--line,#8a7a69);border-radius:14px;padding:14px;background:var(--panel,#fffaf0);color:var(--text,inherit);min-width:0}.v17-card h3{margin:0 0 8px}.v17-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.v17-actions button{min-height:44px;max-width:100%;white-space:normal}.v17-track{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}.v17-step{border-radius:9px;padding:7px 9px;border:1px solid #9e8d7d;font-size:.88rem}.v17-step.active{background:#ead8f6;color:#39234d;font-weight:700}.v17-muted{opacity:.83;font-size:.9rem;line-height:1.5}@media(max-width:640px){.v17-grid{grid-template-columns:1fr}.v17-card{padding:12px}.v17-actions button{flex:1 1 100%;min-height:48px}nav.tabs button{min-height:44px}}@media(prefers-reduced-motion:reduce){.v17-card *{animation:none!important;transition:none!important}}
 </style><style id="v20-style">
@@ -87,7 +126,85 @@ nav.tabs button[data-tab^="v14"]{min-height:44px}
 .v34-actions{display:flex;gap:8px;flex-wrap:wrap}.v34-actions button{min-height:44px;max-width:100%;white-space:normal;text-align:left}
 .v34-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px;min-width:0}
 @media(max-width:600px){.v34-panel{padding:11px}.v34-actions{display:grid;grid-template-columns:minmax(0,1fr)}.v34-actions button{width:100%}}
-</style><style>/* v3.5 mobile readability */.v35-panel{border:1px solid #aaa5;border-radius:14px;padding:14px;margin:12px 0;overflow-wrap:anywhere;min-width:0}.v35-panel button{min-height:44px;max-width:100%;white-space:normal}.v35-actions{display:flex;gap:8px;flex-wrap:wrap}.v35-panel pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:260px;overflow:auto}@media(max-width:600px){.v35-panel{padding:10px}.v35-actions{display:grid;grid-template-columns:minmax(0,1fr)}.v35-actions button{width:100%}}</style><style id="v36-style">.v36-card{padding:15px;margin:12px 0;border:1px solid var(--line,#b9aeb8);border-radius:14px;min-width:0;overflow-wrap:anywhere}.v36-card pre{max-width:100%;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}.v36-buttons{display:flex;gap:9px;flex-wrap:wrap}.v36-buttons button{min-height:48px;flex:1 1 160px;touch-action:manipulation}.v36-card input{max-width:100%;width:100%;box-sizing:border-box}@media(max-width:600px){.v36-card{padding:12px}.v36-buttons{display:grid;grid-template-columns:minmax(0,1fr)}.v36-buttons button{width:100%}nav.tabs{overflow-x:auto;max-width:100vw}body{overflow-x:hidden}}</style></head><body><div id="app"><header class="top"><div><b>MIGUEL CLINIC</b><br><small>하얀 사막 끝의 작은 무료 진료소 · v2.1</small></div><div><span id="clock"></span> <button id="saveBtn">저장</button> <button id="resetBtn">새 게임</button></div></header><div class="banner"><div class="dunes"></div><div class="houses"><div class="house"></div><div class="house"></div><div class="house"></div><div class="house"></div><div class="house"></div></div><div class="placard" id="location">백사구 외곽 정착촌</div></div><nav class="tabs" aria-label="게임 메뉴"><button data-tab="story" class="active">📖 이야기</button><button data-tab="clinic">🩺 진료소</button><button data-tab="village">🏘️ 마을</button><button data-tab="map">🗺️ 지도</button><button data-tab="journal">📒 수첩</button><button data-tab="facilities">🪑 시설</button><button data-tab="neighbors">💬 이웃 이야기</button><button data-tab="schedule">☀️ 일정·날씨</button><button data-tab="queue">🧾 대기열</button><button data-tab="decorate">🛋️ 배치</button><button data-tab="letters">✉️ 편지</button><button data-tab="minigame">🧩 진료 미니게임</button><button data-tab="relations">🤝 주민 관계</button><button data-tab="weatherstory">🌦️ 날씨 사건</button><button data-tab="moments">💜 작은 일상</button><button data-tab="v07games">🎯 새 진료 게임</button><button data-tab="v07bonds">🎁 이웃의 선물</button><button data-tab="v07room">🏡 진료소 풍경</button><button data-tab="v07seasons">🍂 사계절</button><button data-tab="v07daniel">💌 두 사람의 하루</button><button data-tab="updates">⚙️ 고도화</button></nav><main class="layout"><section class="panel" id="main"></section><aside class="panel"><h3 class="sectionTitle">오늘의 상태</h3><div id="stats"></div><div id="sideNotes"></div></aside></main><footer class="footer">공식 서사 이후의 게임 확장 · 원작 확정 설정과 신규 이벤트는 구분됩니다 · 진행 상황은 이 기기의 브라우저에 저장됩니다.</footer></div><script>
+</style><style>/* v3.5 mobile readability */.v35-panel{border:1px solid #aaa5;border-radius:14px;padding:14px;margin:12px 0;overflow-wrap:anywhere;min-width:0}.v35-panel button{min-height:44px;max-width:100%;white-space:normal}.v35-actions{display:flex;gap:8px;flex-wrap:wrap}.v35-panel pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:260px;overflow:auto}@media(max-width:600px){.v35-panel{padding:10px}.v35-actions{display:grid;grid-template-columns:minmax(0,1fr)}.v35-actions button{width:100%}}</style><style id="v36-style">.v36-card{padding:15px;margin:12px 0;border:1px solid var(--line,#b9aeb8);border-radius:14px;min-width:0;overflow-wrap:anywhere}.v36-card pre{max-width:100%;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}.v36-buttons{display:flex;gap:9px;flex-wrap:wrap}.v36-buttons button{min-height:48px;flex:1 1 160px;touch-action:manipulation}.v36-card input{max-width:100%;width:100%;box-sizing:border-box}@media(max-width:600px){.v36-card{padding:12px}.v36-buttons{display:grid;grid-template-columns:minmax(0,1fr)}.v36-buttons button{width:100%}nav.tabs{overflow-x:auto;max-width:100vw}body{overflow-x:hidden}}</style><style id="v38-opening-style">
+#v37gate{--v38-cream:#fff1e4;--v38-pink:#f6cbd9;background:#201b2a;overscroll-behavior:contain}
+#v37gate .v38frame{width:min(1040px,100%);min-height:min(700px,calc(100dvh - 32px));border-radius:28px;position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,5vw,60px);border:1px solid #ffffff55;background:linear-gradient(130deg,#30273b,#4b3b51);box-shadow:0 24px 80px #110e1c99;animation:v38Arrive .65s ease both}
+#v37gate .v38sky{position:absolute;inset:0;z-index:-3;background:radial-gradient(circle at 72% 25%,#ffebc8 0 6%,#e9a88b88 6.2% 13%,transparent 13.2%),linear-gradient(165deg,#796b87 0%,#ad8799 43%,#d7ad9e 70%,#d5b6a2 100%)}
+#v37gate .v38dune{position:absolute;z-index:-2;bottom:-10%;width:140%;height:65%;left:-20%;border-radius:50% 60% 0 0;transform:rotate(-9deg);background:linear-gradient(170deg,#d8b4ac,#8f7388 80%);animation:v38Dune 16s ease-in-out infinite alternate}
+#v37gate .v38dune.two{bottom:-28%;left:10%;transform:rotate(9deg);background:linear-gradient(165deg,#8c748e,#3d354d);animation-duration:22s}
+#v37gate .v38building{position:absolute;z-index:-1;right:9%;bottom:13%;width:34%;height:26%;background:linear-gradient(90deg,#44384b,#655063);clip-path:polygon(0 42%,10% 42%,10% 24%,39% 24%,39% 4%,66% 4%,66% 32%,100% 32%,100% 100%,0 100%);opacity:.86;filter:drop-shadow(0 5px 9px #29202c)}
+#v37gate .v38particles{position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(#fff6e6 1px,transparent 1.5px);background-size:47px 59px;opacity:.26;animation:v38Dust 22s linear infinite}
+#v37gate .v38eyebrow{font-size:12px;letter-spacing:.22em;font-weight:800;color:#fff3e5;text-shadow:0 1px 6px #3b304a}
+#v37gate .v38logo{font-family:Georgia,'Times New Roman',serif;font-size:clamp(54px,10vw,106px);line-height:.93;letter-spacing:-.055em;color:#fff8f0;margin:20px 0;text-shadow:0 6px 30px #271c38aa}
+#v37gate .v38logo span{color:#ffdae4}
+#v37gate .v38lead{font-size:clamp(15px,2.4vw,21px);line-height:1.8;color:#fff7f1;max-width:540px;text-shadow:0 2px 12px #2c243b}
+#v37gate .v38panel{background:#30273bbf;border:1px solid #fff4e85c;backdrop-filter:blur(9px);border-radius:18px;padding:clamp(15px,3vw,26px);max-width:660px}
+#v37gate .v38actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+#v37gate .v38actions button{flex:1 1 170px;min-height:52px;padding:12px 16px;border-radius:12px;border:1px solid #ffe8e4;background:#fff1e8;color:#403247;font-weight:800;cursor:pointer;transition:transform .18s ease,background .18s ease}
+#v37gate .v38actions button:hover:not(:disabled){transform:translateY(-2px);background:#fff}
+#v37gate .v38actions button.secondary{background:#4a3b58d9;color:#fff8f3}
+#v37gate .v38actions button:disabled{opacity:.48;cursor:not-allowed}
+#v37gate .v38actions button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+#v37gate .v38foot{font-size:12px;line-height:1.7;color:#fff1e5;margin-top:12px}
+#v37gate .v38scene-title{font-family:Georgia,'Malgun Gothic',serif;font-size:clamp(30px,5vw,48px);color:#fffaf5;margin:20px 0 12px;line-height:1.28}
+#v37gate .v38story{font-size:clamp(16px,2.5vw,20px);line-height:2.05;white-space:pre-line;color:#fff9f3;min-height:190px;max-width:680px;text-shadow:0 2px 10px #30233b}
+#v37gate .v38steps{display:flex;gap:8px;margin:18px 0}
+#v37gate .v38steps i{height:5px;flex:1;max-width:55px;border-radius:20px;background:#ffffff66}
+#v37gate .v38steps i.active{background:#fff0ce}
+#v37gate .v38scene-content{animation:v38Text .5s ease both}
+#v37gate .v38scene-1 .v38sky{filter:hue-rotate(12deg)}
+#v37gate .v38scene-2 .v38sky{filter:sepia(.18)}
+#v37gate .v38scene-3 .v38sky{filter:brightness(.78)}
+@keyframes v38Arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes v38Text{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes v38Dune{from{translate:-1% 0}to{translate:2% 1%}}
+@keyframes v38Dust{from{background-position:0 0}to{background-position:100px -120px}}
+@media(max-width:620px){#v37gate{padding:0}#v37gate .v38frame{min-height:100dvh;border-radius:0;padding:25px 20px 32px}#v37gate .v38actions{flex-direction:column}#v37gate .v38actions button{flex:initial;width:100%;min-height:52px}#v37gate .v38story{min-height:160px}#v37gate .v38building{width:52%;right:0}}
+@media(prefers-reduced-motion:reduce){#v37gate .v38frame,#v37gate .v38scene-content,#v37gate .v38dune,#v37gate .v38particles{animation:none!important}#v37gate .v38actions button{transition:none!important}}
+</style><style id="v39-opening-style">
+#v37gate .v39frame{position:relative;isolation:isolate;width:min(1100px,100%);min-height:min(720px,calc(100dvh - 24px));display:flex;flex-direction:column;justify-content:space-between;gap:30px;padding:clamp(22px,5vw,65px);border:1px solid #f8e9df55;border-radius:26px;overflow:hidden;background:linear-gradient(145deg,#27263c,#59475c 55%,#af8190);color:#fff5ed;box-shadow:0 25px 90px #08050b99;animation:v39Fade .55s ease both}
+#v37gate .v39frame:before{content:'';position:absolute;inset:0;z-index:-3;background:radial-gradient(circle at 75% 25%,#ffe6bd 0 5%,#e6b6a45e 5.3% 12%,transparent 12.4%),linear-gradient(155deg,#46425e,#b0879b 58%,#e4b69b)}
+#v37gate .v39horizon{position:absolute;inset:auto -10% -15% -10%;height:48%;z-index:-2;background:#d2a6a5;clip-path:polygon(0 34%,14% 17%,31% 37%,48% 18%,65% 28%,84% 9%,100% 27%,100% 100%,0 100%)}
+#v37gate .v39horizon:after{content:'';position:absolute;inset:38% -10% -20%;background:#9a7c92;border-radius:50% 45% 0 0;transform:rotate(-4deg)}
+#v37gate .v39clinic{position:absolute;right:13%;bottom:25%;width:125px;height:90px;background:#f0d9d0;z-index:-1;clip-path:polygon(0 30%,50% 0,100% 30%,100% 100%,0 100%);box-shadow:0 5px 30px #3c2635}
+#v37gate .v39clinic:after{content:'✚';position:absolute;left:43%;top:36%;color:#a16c82;font-size:27px}
+#v37gate .v39eyebrow{font-size:clamp(.68rem,1.5vw,.84rem);letter-spacing:.22em;font-weight:700;color:#ffded8}
+#v37gate .v39brand{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(3.1rem,9vw,7.2rem);line-height:.9;letter-spacing:.025em;margin:24px 0;text-shadow:0 4px 30px #34253555}
+#v37gate .v39brand em{font-style:normal;color:#ffd4de}
+#v37gate .v39lead{font-size:clamp(.95rem,2vw,1.16rem);line-height:1.9;max-width:480px;text-shadow:0 1px 12px #261827aa}
+#v37gate .v39panel{width:min(460px,100%);padding:20px;border:1px solid #fff6ed65;border-radius:19px;background:#241f35b8;backdrop-filter:blur(14px)}
+#v37gate .v39actions{display:grid;gap:10px;margin:12px 0}
+#v37gate .v39actions button{width:100%;min-height:52px;touch-action:manipulation;border-radius:11px;font-weight:700;font-size:1rem;white-space:normal}
+#v37gate .v39actions button:focus-visible,#v37gate .v39minor:focus-visible{outline:3px solid #fff3bb;outline-offset:3px}
+#v37gate .v39actions button.secondary{background:#ffffff15;color:#fff6ee;border:1px solid #ffffff88}
+#v37gate .v39actions button:disabled{opacity:.4;cursor:not-allowed}
+#v37gate .v39small{font-size:.78rem;line-height:1.65;color:#f6dfe5}
+#v37gate .v39chapter{max-width:680px;min-height:280px;display:flex;flex-direction:column;justify-content:center}
+#v37gate .v39chapter h2{font-family:Georgia,serif;font-size:clamp(1.7rem,5vw,3.2rem);line-height:1.25;margin:18px 0}
+#v37gate .v39chapter p{font-size:clamp(1rem,2.2vw,1.25rem);white-space:pre-line;line-height:2.05;max-width:620px;text-shadow:0 2px 14px #261827}
+#v37gate .v39steps{display:flex;gap:8px;margin:16px 0}
+#v37gate .v39steps i{height:5px;flex:1;max-width:95px;background:#fff5ec44;border-radius:10px}
+#v37gate .v39steps i.active{background:#ffe0d2}
+#v37gate .v39minor{min-height:44px;background:transparent;border:1px solid #fff8;color:#fff7f2;border-radius:9px;padding:8px 15px;cursor:pointer}
+#v37gate .v39scene-1:before{filter:hue-rotate(24deg) saturate(.78)}#v37gate .v39scene-2:before{filter:sepia(.26) brightness(.9)}#v37gate .v39scene-3:before{filter:brightness(1.16) saturate(.7)}
+#v37gate .v39arrival{background:#252338eb;border:1px solid #fff8;border-radius:18px;padding:clamp(18px,4vw,35px);max-width:600px}
+@keyframes v39Fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:600px){#v37gate{padding:8px!important;overflow-y:auto}#v37gate .v39frame{min-height:calc(100dvh - 16px);border-radius:14px;padding:22px;gap:16px}#v37gate .v39brand{margin:15px 0}#v37gate .v39panel{padding:14px}#v37gate .v39clinic{right:8%;bottom:29%;transform:scale(.7)}#v37gate .v39chapter{min-height:230px}}
+@media(prefers-reduced-motion:reduce){#v37gate .v39frame{animation:none!important;transition:none!important}}
+</style><style id="v40-style">
+:root{--v40-lilac:#9a7ab2}body.v40-dawn{--v40-sky:#f6e1d0}body.v40-day{--v40-sky:#f9eac7}body.v40-dusk{--v40-sky:#ddc6df}body.v40-night{--v40-sky:#a6a5c6}
+#v40-banner{position:relative;isolation:isolate;overflow:hidden;border-radius:22px;padding:clamp(18px,3vw,32px);margin:0 0 18px;background:linear-gradient(150deg,var(--v40-sky,#f6e1d0),#fff9ef 76%);color:#3c3043;box-shadow:0 8px 28px #37243a18;border:1px solid #ffffff9c}
+#v40-banner:before{content:'';position:absolute;inset:auto -5% -55px -5%;height:135px;background:linear-gradient(155deg,#d5b6b0,#f5d7b7);border-radius:55% 70% 0 0;z-index:-1;opacity:.72}
+#v40-banner h2{margin:8px 0;font-size:clamp(22px,3.5vw,35px);color:#46344c}#v40-banner p{line-height:1.65;max-width:60ch}#v40-banner .v40-kicker{letter-spacing:.13em;font-size:11px;font-weight:800;color:#795a77}
+.v40-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.v40-actions button{min-height:46px;max-width:100%;border-radius:12px}.v40-actions .secondary{background:#fff9f2;color:#49394b;border:1px solid #b9a1b7}
+#v40-welcome{position:fixed;inset:0;z-index:12000;background:#211c2bc9;display:grid;place-items:center;padding:16px;overflow:auto}#v40-welcome[hidden]{display:none!important}
+.v40-card{width:min(100%,560px);border-radius:23px;background:linear-gradient(165deg,#fff6ed,#f5e8f1);color:#453649;box-shadow:0 24px 80px #130d20a0;padding:clamp(22px,4vw,38px);border:1px solid #fff;animation:v40-pop .42s ease-out both}
+.v40-card .v40-kicker{font-size:11px;letter-spacing:.14em;color:#8b647f;font-weight:800}.v40-card h2{font-size:clamp(25px,5vw,38px);line-height:1.25;margin:12px 0}.v40-card p{line-height:1.85;white-space:pre-line}.v40-card button{min-height:48px}.v40-dots{display:flex;gap:6px;margin:20px 0}.v40-dots span{height:5px;flex:1;border-radius:9px;background:#d9cbd7}.v40-dots span.on{background:#8b6998}
+nav.tabs{gap:5px}nav.tabs button{min-height:42px}#main,main{min-width:0}button:focus-visible{outline:3px solid #6e488f;outline-offset:3px}
+@keyframes v40-pop{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){#v40-banner{padding:18px 15px;border-radius:15px}.v40-actions button{flex:1 1 100%}#v40-welcome{padding:10px}.v40-card{border-radius:18px;padding:23px 18px}nav.tabs{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;flex-wrap:nowrap!important}nav.tabs button{flex:0 0 auto;white-space:nowrap;min-height:46px}}
+@media(prefers-reduced-motion:reduce){.v40-card{animation:none!important}#v40-banner *,#v40-welcome *{transition:none!important;animation:none!important}}
+</style></head><body><div id="app"><header class="top"><div><b>MIGUEL CLINIC</b><br><small>하얀 사막 끝의 작은 무료 진료소 · v2.1</small></div><div><span id="clock"></span> <button id="saveBtn">저장</button> <button id="resetBtn">새 게임</button></div></header><div class="banner"><div class="dunes"></div><div class="houses"><div class="house"></div><div class="house"></div><div class="house"></div><div class="house"></div><div class="house"></div></div><div class="placard" id="location">백사구 외곽 정착촌</div></div><nav class="tabs" aria-label="게임 메뉴"><button data-tab="story" class="active">📖 이야기</button><button data-tab="clinic">🩺 진료소</button><button data-tab="village">🏘️ 마을</button><button data-tab="map">🗺️ 지도</button><button data-tab="journal">📒 수첩</button><button data-tab="facilities">🪑 시설</button><button data-tab="neighbors">💬 이웃 이야기</button><button data-tab="schedule">☀️ 일정·날씨</button><button data-tab="queue">🧾 대기열</button><button data-tab="decorate">🛋️ 배치</button><button data-tab="letters">✉️ 편지</button><button data-tab="minigame">🧩 진료 미니게임</button><button data-tab="relations">🤝 주민 관계</button><button data-tab="weatherstory">🌦️ 날씨 사건</button><button data-tab="moments">💜 작은 일상</button><button data-tab="v07games">🎯 새 진료 게임</button><button data-tab="v07bonds">🎁 이웃의 선물</button><button data-tab="v07room">🏡 진료소 풍경</button><button data-tab="v07seasons">🍂 사계절</button><button data-tab="v07daniel">💌 두 사람의 하루</button><button data-tab="updates">⚙️ 고도화</button></nav><main class="layout"><section class="panel" id="main"></section><aside class="panel"><h3 class="sectionTitle">오늘의 상태</h3><div id="stats"></div><div id="sideNotes"></div></aside></main><footer class="footer">공식 서사 이후의 게임 확장 · 원작 확정 설정과 신규 이벤트는 구분됩니다 · 진행 상황은 이 기기의 브라우저에 저장됩니다.</footer></div><script>
 'use strict';const KEY='miguel_clinic_v02';const $=id=>document.getElementById(id);const init=()=>({version:2,day:1,phase:0,tab:'story',story:'intro',peace:55,tired:10,trust:0,supplies:8,coins:24,patients:0,visits:0,flags:{},records:[],messages:[],lastCase:null,toolsUsed:[],vacationDay:0,eventsSeen:[],villageSpot:"clinic",facilities:{},neighborStages:{},specialSeen:[],secondVacation:false});let s=init();const phases=['아침','낮','저녁','밤'];const safe=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));function clamp(v){return Math.max(0,Math.min(100,v))}function modify(d={}){for(const k of ['peace','tired','trust'])if(d[k])s[k]=clamp(s[k]+d[k]);for(const k of ['supplies','coins'])if(d[k])s[k]=Math.max(0,s[k]+d[k]);save(false)}function record(t){if(!s.records.includes(t))s.records.unshift(t);s.records=s.records.slice(0,35)}function save(toast=true){try{localStorage.setItem(KEY,JSON.stringify(s));if(toast)alert('저장했습니다.')}catch(e){if(toast)alert('저장할 수 없습니다. 브라우저 저장 공간을 확인해 주세요.')}}function move(tab){s.tab=tab;save(false);render()}function next(){if(s.phase<3)s.phase++;else{s.phase=0;s.day++;modify({tired:-18,peace:5});s.flags={};s.lastCase=null;s.toolsUsed=[];record(`${s.day}일 차: 새로운 하루가 시작되었다.`)}save(false);render()}function done(k){return !!s.flags[k]}function use(k,delta){if(done(k))return false;s.flags[k]=true;modify(delta);return true}function button(label,cb,disabled=false){const b=document.createElement('button');b.textContent=label;b.disabled=disabled;b.addEventListener('click',cb);return b}function actionWrap(el,actions){const c=document.createElement('div');c.className='choices';actions.forEach(([label,fn,off])=>c.appendChild(button(label,fn,off)));el.appendChild(c)}
 const intro={intro:{who:'내레이션',where:'백사구 외곽 정착촌',text:'미겔 코트리먼은 살아남았다.\n\n제5사관학교의 제로 사태와 제로 전담반을 지나, 그녀는 군을 떠났다.\n\n낡은 버스가 하얀 모래를 뒤로 흩뿌렸다. 미겔은 여행 가방을 들고 변방의 정착촌에 내렸다.',choices:[['마을을 바라본다','arrive']]},arrive:{who:'미겔',where:'마을 입구',text:'물통 하나를 두고 실랑이하는 주민들. 바람에 펄럭이는 천막. 먼지 쌓인 간판.\n\n“……나쁘지 않다.”',choices:[['진료소 열쇠를 꺼낸다','door']]},door:{who:'내레이션',where:'작은 무료 진료소',text:'문은 삐걱거렸고, 선반은 비어 있었다. 그러나 지붕은 멀쩡했다.\n\n미겔은 가방을 내려놓았다.\n\n이번에는 자신이 선택한 방식으로.',choices:[['진료소 문을 연다','first']]},first:{who:'첫 방문자',where:'진료소',text:'“선생님! 아버지가 죽어가요!”\n\n미겔이 즉시 고개를 든다.\n\n“제가 만든 요리를 어제부터 안 드세요!”',choices:[['의식과 호흡부터 확인한다','firstcheck'],['요리를 보여 달라고 한다','firstfood']]},firstcheck:{who:'미겔',where:'진료소',text:'“의식은? 호흡은?”\n\n“멀쩡하세요! 저한테 소리도 지르셨어요!”\n\n“……그럼 직접 상태를 확인하겠다.”',choices:[['아버지를 모셔 오게 한다','father']]},firstfood:{who:'미겔',where:'진료소',text:'그릇에는 정체불명의 보랏빛 덩어리가 담겨 있다.\n\n“……식사는 잠시 중단한다. 아버지는 어디에 있지?”',choices:[['아버지를 모셔 오게 한다','father']]},father:{who:'아버지',where:'진료소',text:'“난 멀쩡해. 저 녀석 요리가 문제지!”\n\n미겔은 직접 상태를 확인했다. 당장 우려할 만한 이상은 없었다.\n\n“의료적인 문제와 요리의 문제는 구분한다.”',choices:[['첫 진료를 기록한다','child']]},child:{who:'어린 환자',where:'진료소 · 오후',text:'문을 두드린 아이의 손에는 흙이 묻은 작은 찰과상이 있었다.\n\n“넘어졌어요. 엄마는 일하러 가셨어요.”',choices:[['상처를 확인하고 아이를 안심시킨다','childend']]},childend:{who:'미겔',where:'진료소',text:'“여기까지 잘 왔다.”\n\n상처를 확인하고 씻어 보호한 뒤, 필요한 안내를 했다.\n\n아이는 돌아가며 조그맣게 손을 흔들었다.',choices:[['진료소를 정리한다','night']]},night:{who:'다니엘 · 통신',where:'진료소 · 밤',text:'“코트리먼. 무사히 도착하셨습니까?”\n\n“그렇다. 오늘은 꽤 시끄러웠다.”\n\n“하하. 벌써 적응하고 계신 것 같습니다.”\n\n미겔은 창밖의 작은 불빛들을 바라보았다.',choices:[['첫날을 마무리한다','complete']]},complete:{who:'DAY 01 COMPLETE',where:'진료소 · 밤',text:'첫날이 끝났다.\n\n이상한 환자도 있었고, 작은 상처를 입은 아이도 있었다.\n\n그리고 먼 곳에서 익숙한 목소리가 들렸다.\n\n이제 진료소의 매일이 시작된다.',choices:[['자유 생활 시작하기','free']]}};
 function story(){const el=$('main');if(s.story!=='free'){const n=intro[s.story]||intro.intro;el.innerHTML=`<div class="speaker">${safe(n.who)}</div><div class="dialogue">${safe(n.text)}</div>`;$('location').textContent=n.where;actionWrap(el,n.choices.map(([label,id])=>[label,()=>{if(id==='child'){modify({trust:8,tired:5});record('첫 진료: 요리 소동')}if(id==='night'){modify({trust:12,tired:10,peace:5});record('두 번째 진료: 아이의 찰과상')}if(id==='free'){s.phase=0;s.day=2;record('첫날 완료 · 진료소 자유 운영 시작')}s.story=id;save(false);render()}]));return} $('location').textContent='백사구 외곽 정착촌';el.innerHTML=`<h2 class="sectionTitle">${s.day}일 차 · ${phases[s.phase]}</h2><div class="dialogue">${dailyText()}</div><div class="notice">이제부터 원하는 활동을 선택할 수 있습니다. 각 시간대에는 주요 행동을 한 번 할 수 있고, 밤이 지나면 다음 날이 시작됩니다.</div>`;actionWrap(el,[['진료소로 이동',()=>move('clinic')],['마을을 둘러본다',()=>move('village')],['수첩을 확인한다',()=>move('journal')],['다음 시간대로',next]]);}
@@ -945,4 +1062,144 @@ function v36TestUI(){const r=v36Tests(),el=v36Page('🧪 v3.6 회귀 검사','�
 const v36OldRender=render;render=function(){v36Ensure();v36OldRender();const pages={v36care:v36CareUI,v36save:v36StorageUI,v36economy:v36EconomyUI,v36town:()=>v36Stories(false),v36daniel:()=>v36Stories(true),v36tests:v36TestUI};if(pages[s.tab])pages[s.tab]()};
 for(const [id,label] of [['v36care','🩺 v3.6 진료'],['v36save','🛡️ v3.6 저장'],['v36tests','🧪 v3.6 검사'],['v36economy','⚖️ v3.6 운영'],['v36town','🏘️ v3.6 주민'],['v36daniel','💜 v3.6 다니엘']])if(!document.querySelector(`[data-tab="${id}"]`)){const b=button(label,()=>move(id));b.dataset.tab=id;document.querySelector('nav.tabs').insertBefore(b,document.querySelector('[data-tab="updates"]'))}
 v36Ensure();render();
+
+// v3.7: 기존 스토리 상태와 저장 구조를 보존하는 독립 타이틀 및 도입 시퀀스
+const v37Scenes=[
+ {title:'하얀 모래가 멈춘 자리',text:'델하르사의 하얀 사막.\n버스가 떠난 뒤에도 먼지는 한동안 가라앉지 않았다.\n\n미겔 코트리먼은 낡은 여행 가방을 내려놓고, 바람이 지나가는 소리를 들었다.'},
+ {title:'낯선 목소리들',text:'“여기 의사 선생님이 오신다던데요?”\n“우리 선인장도 봐주나요?”\n\n서로 다른 목소리가 작은 정착촌 골목에서 겹쳐졌다. 미겔은 그 소리의 방향으로 고개를 돌렸다.'},
+ {title:'문 앞의 열쇠',text:'녹슨 간판 아래, 작은 진료소의 문이 기다리고 있었다.\n\n미겔은 주머니에서 열쇠를 꺼냈다.\n“……우선 청소부터 해야겠군.”'},
+ {title:'MIGUEL CLINIC',text:'누군가에게는 평범한 하루.\n누군가에게는 겨우 찾아온 평화.\n\n하얀 사막 끝, 무료 진료소의 첫날이 시작됩니다.'}
+];
+let v37SceneIndex=0;
+const v37Gate=document.createElement('div');v37Gate.id='v37gate';v37Gate.setAttribute('role','dialog');v37Gate.setAttribute('aria-modal','true');v37Gate.setAttribute('aria-label','MIGUEL CLINIC 시작 화면');document.body.appendChild(v37Gate);
+function v37Saved(){try{const x=JSON.parse(localStorage.getItem(KEY));return !!(x&&x.version===2&&Number.isFinite(x.day)&&x.flags&&Array.isArray(x.records))}catch(e){return false}}
+function v37ClearGate(){v37Gate.hidden=true;document.body.style.overflow='';render()}
+function v37BeginNew(){if(v37Saved()&&!confirm('기존 저장을 새 게임으로 덮어씁니다. 계속할까요?'))return;s=init();s.v37={introSeen:false};save(false);v37SceneIndex=0;v37ShowScene()}
+function v37Continue(){if(!v37Saved())return;v37ClearGate()}
+function v37ShowTitle(){v37Gate.hidden=false;document.body.style.overflow='hidden';v37Gate.innerHTML=`<section class="v37frame"><div><div class="v37eyebrow">DELHARSA · A LITTLE PEACE</div><h1 class="v37brand">MIGUEL<br><span>CLINIC</span></h1><p class="v37subtitle">하얀 사막 끝의 작은 무료 진료소<br>누군가의 오늘을 돌보는 이야기</p></div><div><div class="v37actions"><button id="v37new">✦ 새 게임 · 도입 이야기</button><button class="secondary" id="v37continue" ${v37Saved()?'':'disabled'}>↳ 이어하기</button></div><div class="v37footer">[게임 확장] 독립 도입 이벤트 · 기존 저장은 ‘이어하기’로 유지됩니다.<br>소리 없이 즐길 수 있는 이야기형 오프닝입니다.</div></div></section>`;document.getElementById('v37new').onclick=v37BeginNew;document.getElementById('v37continue').onclick=v37Continue;document.getElementById('v37new').focus()}
+function v37ShowScene(){v37Gate.hidden=false;document.body.style.overflow='hidden';const scene=v37Scenes[v37SceneIndex];v37Gate.innerHTML=`<section class="v37frame scene-mode"><div><div class="v37eyebrow">PROLOGUE · ${String(v37SceneIndex+1).padStart(2,'0')} / ${v37Scenes.length}</div><div class="v37progress">${v37Scenes.map((_,i)=>`<i class="${i<=v37SceneIndex?'active':''}"></i>`).join('')}</div><article class="v37scene"><h2>${scene.title}</h2><p>${scene.text}</p></article></div><div><div class="v37actions"><button id="v37next">${v37SceneIndex===v37Scenes.length-1?'진료소 문 열기 →':'다음 이야기 →'}</button><button class="secondary" id="v37skip">도입 건너뛰기</button></div><div class="v37footer">[게임 확장] 기존 원작의 확정 장면이 아닌 게임 전용 도입입니다.</div></div></section>`;
+ const finish=()=>{s.v37={...(s.v37||{}),introSeen:true};save(false);v37ClearGate()};
+ document.getElementById('v37next').onclick=()=>{if(v37SceneIndex<v37Scenes.length-1){v37SceneIndex++;v37ShowScene()}else finish()};document.getElementById('v37skip').onclick=finish;document.getElementById('v37next').focus()}
+// 새 게임 버튼은 저장을 지우는 대신 도입을 다시 보여주고, 첫 진입에는 타이틀을 표시합니다.
+document.getElementById('resetBtn').addEventListener('click',()=>{setTimeout(v37ShowTitle,0)});
+const v37TitleButton=button('🎬 시작 화면',v37ShowTitle);v37TitleButton.id='v37titleButton';document.querySelector('.top>div:last-child').appendChild(v37TitleButton);
+v37ShowTitle();
+
+// v3.8: 독립 타이틀 및 프롤로그 연출 개선. 원작 확정 사건이 아닌 [게임 확장].
+const v38Markup=(scene=-1)=>`<div class="v38sky"></div><div class="v38dune"></div><div class="v38dune two"></div><div class="v38building"></div><div class="v38particles"></div>`;
+function v38Frame(content,scene=-1){v37Gate.hidden=false;document.body.style.overflow='hidden';v37Gate.innerHTML=`<section class="v38frame ${scene>=0?'v38scene-'+scene:''}" aria-label="${scene>=0?'도입 이야기':'게임 시작 화면'}">${v38Markup(scene)}${content}</section>`;}
+function v38Title(){v38Frame(`<div><div class="v38eyebrow">DELHARSA · A LITTLE PEACE</div><h1 class="v38logo">MIGUEL<br><span>CLINIC</span></h1><p class="v38lead">하얀 사막 끝의 작은 무료 진료소.<br>전쟁이 지나간 자리에서, 평범한 하루를 돌봅니다.</p></div><div class="v38panel"><div class="v38eyebrow">THE STORY BEGINS HERE</div><div class="v38actions"><button id="v37new">✦ 새 게임 · 프롤로그</button><button class="secondary" id="v37continue" ${v37Saved()?'':'disabled'}>↳ 이어하기</button></div><div class="v38foot">[게임 확장] 새로운 도입 이야기 · 기존 세이브는 이어하기로 유지됩니다.<br>화면 전환은 기기 모션 설정을 따르며, 소리 없이 진행됩니다.</div></div>`);document.getElementById('v37new').onclick=v37BeginNew;document.getElementById('v37continue').onclick=v37Continue;document.getElementById('v37new').focus({preventScroll:true});}
+function v38Scene(){const item=v37Scenes[v37SceneIndex];v38Frame(`<div><div class="v38eyebrow">PROLOGUE · ${String(v37SceneIndex+1).padStart(2,'0')} / ${v37Scenes.length}</div><div class="v38steps">${v37Scenes.map((_,i)=>`<i class="${i<=v37SceneIndex?'active':''}"></i>`).join('')}</div><div class="v38scene-content" key="${v37SceneIndex}"><h2 class="v38scene-title">${item.title}</h2><p class="v38story">${item.text}</p></div></div><div class="v38panel"><div class="v38actions"><button id="v37next">${v37SceneIndex===v37Scenes.length-1?'진료소 문 열기 →':'다음 이야기 →'}</button><button class="secondary" id="v37skip">도입 건너뛰기</button></div><div class="v38foot">[게임 확장] 게임 전용 프롤로그 · 진행 상태는 기존 저장 구조에 보존됩니다.</div></div>`,v37SceneIndex);
+const finish=()=>{s.v37={...(s.v37||{}),introSeen:true};save(false);v37ClearGate()};
+document.getElementById('v37next').onclick=()=>{if(v37SceneIndex<v37Scenes.length-1){v37SceneIndex++;v38Scene()}else finish()};document.getElementById('v37skip').onclick=finish;document.getElementById('v37next').focus({preventScroll:true});}
+v37ShowTitle=v38Title;v37ShowScene=v38Scene;
+// 이전 버전의 '시작 화면' 버튼과 새 게임/이어하기 핸들러는 재정의된 함수를 사용합니다.
+v38Title();
+
+// v3.9: 접근 가능한 독립 타이틀, 장면별 분위기, 본편 진입 연출. [게임 확장]
+let v39Stage='title';
+let v39PreviousFocus=null;
+function v39Shell(content,scene=-1){
+ v37Gate.hidden=false;document.body.style.overflow='hidden';
+ const label=scene<0?'게임 시작 화면':'프롤로그 '+(scene+1)+'장';
+ v37Gate.innerHTML=`<section class="v39frame ${scene>=0?'v39scene-'+scene:''}" role="document" aria-label="${label}"><div class="v39horizon" aria-hidden="true"></div><div class="v39clinic" aria-hidden="true"></div>${content}</section>`;
+ v37Gate.setAttribute('aria-label',label);
+}
+function v39Title(){
+ v39Stage='title';
+ v39Shell(`<div><div class="v39eyebrow">DELHARSA · A LITTLE PEACE</div><h1 class="v39brand">MIGUEL<br><em>CLINIC</em></h1><p class="v39lead">하얀 사막 끝, 작은 무료 진료소.<br>전쟁이 지나간 자리에서 오늘의 평화를 돌봅니다.</p></div><div class="v39panel"><div class="v39eyebrow">A NEW DAY BEGINS</div><div class="v39actions"><button id="v39new">✦ 새 게임 시작</button><button id="v39continue" class="secondary" ${v37Saved()?'':'disabled'}>↳ 이어하기</button></div><p class="v39small">[게임 확장] 프롤로그는 언제든 건너뛸 수 있습니다.<br>기존 저장이 있다면 이어하기로 안전하게 돌아갑니다.</p></div>`);
+ document.getElementById('v39new').onclick=v39New;
+ document.getElementById('v39continue').onclick=v39Continue;
+ document.getElementById('v39new').focus({preventScroll:true});
+}
+function v39New(){
+ if(v37Saved()&&!window.confirm('현재 진행을 새 게임으로 교체합니다. 계속할까요?'))return;
+ // 덮어쓰기 전에 이전 세이브를 별도 키로 보존한다.
+ try{const old=localStorage.getItem(KEY);if(old)localStorage.setItem('miguel_clinic_v39_pre_new_backup',old)}catch(e){}
+ s=init();s.v37={introSeen:false};s.v39={introFinished:false};save(false);
+ v37SceneIndex=0;v39Scene();
+}
+function v39Continue(){if(!v37Saved())return;v39Stage='game';v37ClearGate();}
+function v39Finish(){
+ if(!s.v37)s.v37={};s.v37.introSeen=true;
+ s.v39={...(s.v39||{}),introFinished:true};save(false);
+ v39Stage='arrival';v39Arrival();
+}
+function v39Scene(){
+ v39Stage='scene';const item=v37Scenes[v37SceneIndex];
+ v39Shell(`<div><div class="v39eyebrow">PROLOGUE · ${String(v37SceneIndex+1).padStart(2,'0')} / ${v37Scenes.length}</div><div class="v39steps" aria-label="${v37SceneIndex+1} / ${v37Scenes.length} 장면">${v37Scenes.map((_,i)=>`<i class="${i<=v37SceneIndex?'active':''}"></i>`).join('')}</div><article class="v39chapter" aria-live="polite"><h2>${safe(item.title)}</h2><p>${safe(item.text)}</p></article></div><div class="v39panel"><div class="v39actions"><button id="v39next">${v37SceneIndex===v37Scenes.length-1?'진료소 문 열기 →':'다음 장면 →'}</button><button class="secondary" id="v39skip">프롤로그 건너뛰기</button></div><button class="v39minor" id="v39back" ${v37SceneIndex===0?'disabled':''}>← 이전 장면</button><p class="v39small">[게임 확장] 원작 확정 장면이 아닌 게임 전용 도입입니다.</p></div>`,v37SceneIndex);
+ document.getElementById('v39next').onclick=()=>{if(v37SceneIndex<v37Scenes.length-1){v37SceneIndex++;v39Scene()}else v39Finish()};
+ document.getElementById('v39skip').onclick=v39Finish;
+ document.getElementById('v39back').onclick=()=>{if(v37SceneIndex>0){v37SceneIndex--;v39Scene()}};
+ document.getElementById('v39next').focus({preventScroll:true});
+}
+function v39Arrival(){
+ v39Shell(`<div><div class="v39eyebrow">DAY 01 · MORNING</div><div class="v39arrival"><h2>진료소의 첫 아침</h2><p class="v39lead">미겔은 진료소의 문을 열었습니다.<br>이제 당신의 첫 번째 하루를 시작하세요.</p></div></div><div class="v39panel"><div class="v39actions"><button id="v39enter">첫날 시작하기 →</button></div><p class="v39small">본편 이야기의 첫날로 이어집니다. 기존 진행 데이터는 보존됩니다.</p></div>`);
+ document.getElementById('v39enter').onclick=()=>{v39Stage='game';s.tab='story';save(false);v37ClearGate();};
+ document.getElementById('v39enter').focus({preventScroll:true});
+}
+// 이전 타이틀 버튼 및 시작 핸들러가 최신 화면을 열도록 연결.
+v37ShowTitle=v39Title;v37ShowScene=v39Scene;
+v37BeginNew=v39New;v37Continue=v39Continue;
+// 오버레이 내부 키보드 포커스 유지. Esc로 진행 중 새 게임을 무단 취소하지 않음.
+v37Gate.addEventListener('keydown',e=>{
+ if(e.key!=='Tab'||v37Gate.hidden)return;
+ const a=[...v37Gate.querySelectorAll('button:not([disabled])')];if(!a.length)return;
+ const first=a[0],last=a[a.length-1];
+ if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+ else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+});
+v39Title();
+
+// v4.0 additive first-day experience. Preserve KEY, version:2 and existing systems.
+const v40Scenes=[
+ {title:'작은 진료소의 첫 아침',text:'하얀 모래가 창틀에 얇게 쌓여 있습니다.\n미겔은 낡은 문고리를 한 번 더 확인합니다.\n\n“문은 열었으니, 이제 사람을 맞아야겠군.”'},
+ {title:'오늘의 첫 손님',text:'문밖에서 조심스러운 발소리가 들립니다.\n\n“의사 선생님, 선인장이 자꾸 저를 노려봐요.”\n\n미겔은 잠시 침묵합니다.\n“……일단 본인 상태부터 확인하죠.”'},
+ {title:'평범한 하루의 시작',text:'책상에는 진료 기록지와 부족한 의료 물품이 놓여 있습니다.\n누군가의 하루를 돌보는 일이 여기서 시작됩니다.\n\n[게임 확장] 이 첫날 이벤트는 게임 전용 이야기입니다.'}
+];
+let v40IntroIndex=0;
+const v40Welcome=document.createElement('div');v40Welcome.id='v40-welcome';v40Welcome.hidden=true;v40Welcome.setAttribute('role','dialog');v40Welcome.setAttribute('aria-modal','true');v40Welcome.setAttribute('aria-label','진료소 첫날 이벤트');document.body.appendChild(v40Welcome);
+function v40Ensure(){if(!s.v40||typeof s.v40!=='object')s.v40={firstDaySeen:false};}
+function v40Open(){v40Ensure();v40IntroIndex=0;v40Show();}
+function v40Close(){v40Ensure();s.v40.firstDaySeen=true;save(false);v40Welcome.hidden=true;document.body.style.overflow='';move('story');}
+function v40Show(){const item=v40Scenes[v40IntroIndex];v40Welcome.hidden=false;document.body.style.overflow='hidden';v40Welcome.innerHTML=`<section class="v40-card" tabindex="-1"><div class="v40-kicker">DAY 01 · ${String(v40IntroIndex+1).padStart(2,'0')} / 03 · [게임 확장]</div><h2>${safe(item.title)}</h2><p aria-live="polite">${safe(item.text).replace(/\\n/g,'<br>')}</p><div class="v40-dots" aria-hidden="true">${v40Scenes.map((_,i)=>`<span class="${i<=v40IntroIndex?'on':''}"></span>`).join('')}</div><div class="v40-actions"><button id="v40-next">${v40IntroIndex===2?'진료소 운영 시작하기':'다음 장면 →'}</button><button class="secondary" id="v40-skip">건너뛰기</button>${v40IntroIndex?'<button class="secondary" id="v40-back">← 이전</button>':''}</div></section>`;
+ document.getElementById('v40-next').onclick=()=>{if(v40IntroIndex===2)v40Close();else{v40IntroIndex++;v40Show();}};
+ document.getElementById('v40-skip').onclick=v40Close;
+ const back=document.getElementById('v40-back');if(back)back.onclick=()=>{v40IntroIndex--;v40Show()};
+ document.getElementById('v40-next').focus({preventScroll:true});}
+function v40MaybeFirstDay(){v40Ensure();if(s.day===1&&!s.v40.firstDaySeen&&s.v39&&s.v39.introFinished){v40Open();}}
+function v40Phase(){return ['dawn','day','dusk','night'][Math.min(3,Math.max(0,Number(s.phase)||0))]}
+function v40Banner(){if(s.tab!=='story')return;const main=$('main');if(!main||document.getElementById('v40-banner'))return;document.body.classList.remove('v40-dawn','v40-day','v40-dusk','v40-night');document.body.classList.add('v40-'+v40Phase());
+ const messages=['창문 너머로 하얀 사막의 아침 햇살이 들어옵니다.','진료소 앞 골목에 주민들의 발걸음이 늘어납니다.','모래언덕이 연보랏빛으로 물들고, 진료 기록을 정리할 시간입니다.','고요한 밤. 내일을 위해 잠시 쉬어갈 시간입니다.'];
+ const div=document.createElement('section');div.id='v40-banner';div.setAttribute('aria-label','진료소 오늘의 풍경');div.innerHTML=`<div class="v40-kicker">DELHARSA · DAY ${String(s.day).padStart(2,'0')} · ${safe(phases[s.phase])}</div><h2>작은 진료소의 오늘</h2><p>${safe(messages[s.phase]||messages[0])}</p><div class="v40-actions"><button id="v40-go-care">🩺 진료 보러 가기</button><button id="v40-go-village" class="secondary">🏘️ 주민 만나기</button>${s.day===1?'<button id="v40-replay" class="secondary">✦ 첫날 이야기 다시 보기</button>':''}</div>`;
+ main.prepend(div);document.getElementById('v40-go-care').onclick=()=>move('v36care');document.getElementById('v40-go-village').onclick=()=>move('v36town');const replay=document.getElementById('v40-replay');if(replay)replay.onclick=v40Open;
+}
+const v40PrevRender=render;render=function(){v40PrevRender();v40Banner();};
+const v40PrevArrival=v39Arrival;v39Arrival=function(){v40PrevArrival();const enter=document.getElementById('v39enter');if(enter)enter.onclick=()=>{v39Stage='game';s.tab='story';save(false);v37ClearGate();v40MaybeFirstDay();};};
+const v40PrevContinue=v39Continue;v39Continue=function(){v40PrevContinue();};v37Continue=v39Continue;
+// Keep the game title on top; the first-day event is only shown after new-game prologue.
+v40Ensure();render();
+
+// v4.1 immersive clinic room; [게임 확장]. Existing story and save untouched.
+const v41Guests=[
+ {name:'선인장을 경계하는 주민',line:'“선생님, 선인장이 또 저를 노려봐요. 오늘은 눈을 깜빡인 것 같기도 하고요.”',reply:'“식물은 눈을 깜빡이지 않습니다. 우선 잠은 잘 주무셨나요?”'},
+ {name:'찻주전자 장인',line:'“주전자가 말을 안 듣습니다. 제 건강도 좀 봐주시겠습니까?”',reply:'“주전자는 제가 고칠 수 없습니다. 맥박부터 확인하죠.”'},
+ {name:'양산 수집가',line:'“햇빛을 피하려고 양산을 세 개나 썼더니 팔이 아파요.”',reply:'“양산은 하나면 충분합니다. 팔을 움직여 보세요.”'},
+ {name:'라디오 수리공',line:'“라디오가 모래바람 예보 대신 선인장 노래를 틀어요.”',reply:'“라디오는 수리하시고, 손목 통증은 제가 보겠습니다.”'}
+];
+function v41Ensure(){if(!s.v41||typeof s.v41!=='object')s.v41={};const d=s.v41;if(!Array.isArray(d.met))d.met=[];if(!Array.isArray(d.talked))d.talked=[];if(!Number.isInteger(d.dialogStep))d.dialogStep=0;}
+function v41Guest(){return v41Guests[(Math.max(1,s.day)-1)%v41Guests.length]}
+function v41Room(){const guest=v41Guest();const main=$('main');if(!main||s.tab!=='story'||document.getElementById('v41-room'))return;v41Ensure();const already=s.v41.talked.includes(s.day);const room=document.createElement('section');room.id='v41-room';room.setAttribute('aria-label','진료소 내부');room.innerHTML=`<div class="v41-room phase-${Math.min(3,Math.max(0,Number(s.phase)||0))}" role="img" aria-label="창문과 약품 선반, 진료 책상이 있는 작은 진료소"><div class="v41-window"></div><div class="v41-shelf"></div><div class="v41-visitor" aria-hidden="true"></div><div class="v41-desk"></div><div class="v41-caption">DAY ${String(s.day).padStart(2,'0')} · ${safe(phases[s.phase]||'아침')}</div></div><div class="v41-scene"><h3>🚪 오늘의 방문객 · ${safe(guest.name)}</h3><div class="v41-dialogue" aria-live="polite">${already?safe('오늘의 인사는 마쳤습니다. 진료 기록을 확인해 보세요.'):safe(guest.line)}</div><div class="v41-controls"><button id="v41-talk" ${already?'disabled':''}>${already?'오늘의 대화 완료':'💬 미겔의 대답 듣기'}</button><button id="v41-care">🩺 진료 접수·예약</button><button id="v41-village">🏘️ 정착촌 둘러보기</button></div><div class="v41-compact">[게임 확장] 주민의 짧은 인사입니다. 실제 진료 예약·치료 기록과 별개로 저장됩니다.</div></div>`;
+ const banner=document.getElementById('v40-banner');if(banner)banner.after(room);else main.prepend(room);
+ document.getElementById('v41-talk').onclick=()=>{v41Ensure();if(s.v41.talked.includes(s.day))return;s.v41.talked.push(s.day);s.v41.met.push({day:s.day,guest:guest.name});s.v41.dialogStep=1;save(false);const text=room.querySelector('.v41-dialogue');text.textContent='미겔: '+guest.reply;document.getElementById('v41-talk').disabled=true;document.getElementById('v41-talk').textContent='✓ 오늘의 대화 완료';};
+ document.getElementById('v41-care').onclick=()=>move('v36care');
+ document.getElementById('v41-village').onclick=()=>move('v36town');
+}
+const v41PreviousRender=render;
+render=function(){v41PreviousRender();v41Room();};
+// After the first-day event, show the room without forcing a separate page.
+const v41PreviousClose=v40Close;
+v40Close=function(){v41PreviousClose();render();};
+// Respect legacy saved game: no automatic event replay on continue.
+v41Ensure();render();
 </script></body></html>

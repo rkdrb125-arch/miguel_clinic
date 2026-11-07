@@ -1,0 +1,20 @@
+{
+  "version": "3.9",
+  "chromium_ui": {
+    "desktop_1280x800": "pass",
+    "mobile_390x844": "pass",
+    "new_game_four_scenes_first_day": "pass",
+    "skip": "pass",
+    "regression": "22/22",
+    "page_errors": 0,
+    "horizontal_overflow": false
+  },
+  "localStorage_reload": "not verified: browser navigation blocked by administrator and about:blank origin denies localStorage",
+  "old_save_continue": "not verified in actual browser",
+  "node_syntax": "pass",
+  "previous_files_changed": [
+    "index.html",
+    "README.md"
+  ],
+  "notes": "Do not interpret Chromium DOM injection as proof of persistent storage."
+}
