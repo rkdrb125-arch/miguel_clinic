@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "page_loaded": true,
+    "regression": "20/20",
+    "flow_buttons": 18,
+    "booked": true,
+    "treated": true,
+    "duplicate_prevented": true,
+    "followup_record": true,
+    "localStorage_reload": "not tested: local server blocked and about:blank has no localStorage",
+    "storage_page": true,
+    "storage_key": "unavailable: about:blank origin",
+    "older_save_compatible": true,
+    "mobile_no_overflow": true
+  },
+  "errors": []
+}

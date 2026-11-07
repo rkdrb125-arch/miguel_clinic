@@ -1,0 +1,119 @@
+{
+  "regression": [
+    {
+      "name": "저장 키 호환",
+      "pass": true
+    },
+    {
+      "name": "version 2 유지",
+      "pass": true
+    },
+    {
+      "name": "구버전 기본 형식",
+      "pass": true
+    },
+    {
+      "name": "구버전 신규 필드 미필수",
+      "pass": true
+    },
+    {
+      "name": "기본 예약",
+      "pass": true
+    },
+    {
+      "name": "완료 기록 누락",
+      "pass": true
+    },
+    {
+      "name": "진료 중복 차단",
+      "pass": true
+    },
+    {
+      "name": "진료 날짜 불일치",
+      "pass": true
+    },
+    {
+      "name": "접수 기록 불일치",
+      "pass": true
+    },
+    {
+      "name": "비파괴 검사",
+      "pass": true
+    },
+    {
+      "name": "경제 구매",
+      "pass": true
+    },
+    {
+      "name": "물자 상한",
+      "pass": true
+    },
+    {
+      "name": "잔액 부족",
+      "pass": true
+    },
+    {
+      "name": "나눔 물자 부족",
+      "pass": true
+    },
+    {
+      "name": "하루 중복 운영",
+      "pass": true
+    },
+    {
+      "name": "상한 직전 구매",
+      "pass": true
+    },
+    {
+      "name": "일상 콘텐츠 주민 4",
+      "pass": true
+    },
+    {
+      "name": "일상 콘텐츠 다니엘 4",
+      "pass": true
+    },
+    {
+      "name": "저장 구조 검증 함수",
+      "pass": true
+    },
+    {
+      "name": "예약 자동 접수 함수",
+      "pass": true
+    }
+  ],
+  "regression_pass": 20,
+  "regression_total": 20,
+  "treated": {
+    "a": {
+      "day": 4,
+      "phase": 1,
+      "status": "completed"
+    },
+    "t": {
+      "day": 4,
+      "choice": "상태 확인",
+      "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다.",
+      "patient": "cactus"
+    },
+    "f": {
+      "due": 6,
+      "sourceDay": 4,
+      "choice": "상태 확인",
+      "stage": 0,
+      "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+    }
+  },
+  "duplicate_guard": true,
+  "followup": {
+    "due": 8,
+    "sourceDay": 4,
+    "choice": "상태 확인",
+    "stage": 1,
+    "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+  },
+  "later_day": 10,
+  "save_screen": "🛡️ v3.4 저장 영속성 확인\n\n실제 localStorage를 사용합니다. 새로고침 확인은 사용자의 브라우저에서만 최종 확인할 수 있습니다.\n\n저장 상태와 일치 여부\n{\n  \"key\": \"miguel_clinic_v02\",\n  \"current\": {\n    \"version\": 2,\n    \"day\": 10,\n    \"phase\": 1,\n    \"story\": \"free\",\n    \"appointments\": 1,\n    \"treatments\": 1,\n    \"followups\": 1,\n    \"coins\": 24,\n    \"supplies\": 8\n  },\n  \"stored\": {\n    \"version\": 2,\n    \"day\": 10,\n    \"phase\": 1,\n    \"story\": \"free\",\n ",
+  "mock_store": 4895,
+  "mobile_overflow": true,
+  "page_errors": []
+}

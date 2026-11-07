@@ -1,0 +1,9 @@
+{
+  "js_syntax": "pass",
+  "chromium_e2e": "pass: reservation, automatic checkin, treatment, followup using actual UI buttons",
+  "regression": "20/20 pass",
+  "backup": "validation and comparison passed via in-browser JS on in-memory v2 save object; persistent localStorage roundtrip NOT verified",
+  "browser_persistent_localStorage": "blocked by environment origin policy",
+  "mobile": "390px viewport test passed",
+  "zip": "pass"
+}

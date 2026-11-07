@@ -1,0 +1,137 @@
+{
+  "url": "http://127.0.0.1:56709/index.html",
+  "tests": {
+    "initial": {
+      "key": "miguel_clinic_v02",
+      "version": 2,
+      "day": 1,
+      "hasV32": true
+    },
+    "regression": [
+      {
+        "name": "저장 키",
+        "pass": true
+      },
+      {
+        "name": "저장 버전",
+        "pass": true
+      },
+      {
+        "name": "기본 예약 정상",
+        "pass": true
+      },
+      {
+        "name": "예약 시간 오류",
+        "pass": true
+      },
+      {
+        "name": "완료 불일치",
+        "pass": true
+      },
+      {
+        "name": "완료 기록 검사",
+        "pass": true
+      },
+      {
+        "name": "대기열 누락",
+        "pass": true
+      },
+      {
+        "name": "대기열 일치",
+        "pass": true
+      },
+      {
+        "name": "물자 구매",
+        "pass": true
+      },
+      {
+        "name": "자금 부족",
+        "pass": true
+      },
+      {
+        "name": "물자 부족",
+        "pass": true
+      },
+      {
+        "name": "중복 운영",
+        "pass": true
+      },
+      {
+        "name": "상한 제한",
+        "pass": true
+      },
+      {
+        "name": "이전 필드 보존",
+        "pass": true
+      },
+      {
+        "name": "비파괴 요약",
+        "pass": true
+      },
+      {
+        "name": "기존 진료 함수",
+        "pass": true
+      },
+      {
+        "name": "기존 접수 함수",
+        "pass": true
+      },
+      {
+        "name": "기존 백업 검증",
+        "pass": true
+      }
+    ],
+    "storage_menu": "🛡️ v3.2 영속 저장 확인\n브라우저 저장소\n\n저장 후 새로고침으로 동일한 날짜·시간·진료 건수를 다시 확인할 수 있습니다.\n\n{\n  \"key\": \"miguel_clinic_v02\",\n  \"live\": {\n    \"day\": 1,\n    \"phase\": 0,\n    \"appointments\": 0,\n    \"treatm",
+    "appointment": {
+      "status": "checked-in",
+      "queue": {
+        "day": 4,
+        "patient": "cactus",
+        "checkedIn": true,
+        "where": "진료소",
+        "automatic": true
+      }
+    },
+    "treatment": {
+      "status": "completed",
+      "treatment": {
+        "day": 4,
+        "choice": "상태 확인",
+        "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다.",
+        "patient": "cactus"
+      },
+      "followup": {
+        "due": 6,
+        "sourceDay": 4,
+        "choice": "상태 확인",
+        "stage": 0,
+        "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+      }
+    },
+    "duplicate_prevented": true,
+    "reload": {
+      "day": 4,
+      "version": 2,
+      "status": "completed",
+      "treated": true
+    },
+    "long_play": {
+      "day": 6,
+      "phase": 1,
+      "followup": {
+        "due": 6,
+        "sourceDay": 4,
+        "choice": "상태 확인",
+        "stage": 0,
+        "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+      }
+    },
+    "mobile_overflow": false,
+    "page_errors": []
+  },
+  "notes": [
+    "Chromium about:blank에 HTML 주입, 메모리 localStorage shim 사용",
+    "실제 HTTP URL은 정책 차단",
+    "새로고침 영속성 및 실제 구버전 세이브 파일 복원 미검증"
+  ]
+}

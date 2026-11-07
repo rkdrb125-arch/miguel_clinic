@@ -1,0 +1,163 @@
+{
+  "regression": [
+    {
+      "name": "저장 키",
+      "pass": true
+    },
+    {
+      "name": "최상위 버전",
+      "pass": true
+    },
+    {
+      "name": "구버전 검증",
+      "pass": true
+    },
+    {
+      "name": "추가 필드 선택",
+      "pass": true
+    },
+    {
+      "name": "예약 정상",
+      "pass": true
+    },
+    {
+      "name": "진료 가능",
+      "pass": true
+    },
+    {
+      "name": "시간 전 차단",
+      "pass": true
+    },
+    {
+      "name": "진료 중복 차단",
+      "pass": true
+    },
+    {
+      "name": "완료 누락 감지",
+      "pass": true
+    },
+    {
+      "name": "정상 물자 구매",
+      "pass": true
+    },
+    {
+      "name": "물자 상한",
+      "pass": true
+    },
+    {
+      "name": "물자 29 상한",
+      "pass": true
+    },
+    {
+      "name": "자금 부족",
+      "pass": true
+    },
+    {
+      "name": "물자 부족",
+      "pass": true
+    },
+    {
+      "name": "하루 중복 운영",
+      "pass": true
+    },
+    {
+      "name": "운영 정리",
+      "pass": true
+    },
+    {
+      "name": "운영 정비",
+      "pass": true
+    },
+    {
+      "name": "주민 4편",
+      "pass": true
+    },
+    {
+      "name": "다니엘 4편",
+      "pass": true
+    },
+    {
+      "name": "복원 함수",
+      "pass": true
+    },
+    {
+      "name": "재방문 함수",
+      "pass": true
+    },
+    {
+      "name": "진료 함수",
+      "pass": true
+    }
+  ],
+  "regression_pass": 22,
+  "regression_total": 22,
+  "navigation": {
+    "v36care": "🩺 v3.6 다일차 진료",
+    "v36save": "🛡️ v3.6 저장 및 승인형 복원",
+    "v36economy": "⚖️ v3.6 운영",
+    "v36town": "🏘️ v3.6 주민 후일담",
+    "v36daniel": "💜 v3.6 다니엘 일상",
+    "v36tests": "🧪 v3.6 회귀 검사"
+  },
+  "schedule_buttons": [
+    "현재 시간대 예약",
+    "진료 기록 보기",
+    "현재 시간대 예약",
+    "진료 기록 보기",
+    "현재 시간대 예약",
+    "진료 기록 보기",
+    "현재 시간대 예약",
+    "진료 기록 보기",
+    "현재 시간대 예약",
+    "진료 기록 보기"
+  ],
+  "treatment": {
+    "t": {
+      "day": 9,
+      "choice": "대화",
+      "result": "우선 선인장에게 이름표를 달아 보자고 제안한다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다.",
+      "patient": "cactus"
+    },
+    "ap": {
+      "day": 9,
+      "phase": 0,
+      "status": "completed"
+    },
+    "follow": {
+      "due": 11,
+      "sourceDay": 9,
+      "choice": "대화",
+      "stage": 0,
+      "result": "우선 선인장에게 이름표를 달아 보자고 제안한다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+    }
+  },
+  "duplicate_disabled": true,
+  "followup_buttons": 1,
+  "followup": {
+    "due": 13,
+    "sourceDay": 9,
+    "choice": "대화",
+    "stage": 1,
+    "result": "우선 선인장에게 이름표를 달아 보자고 제안한다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+  },
+  "import": {
+    "ok": true,
+    "backup": "miguel_clinic_v02_v36_pre_restore",
+    "restored": {
+      "version": 2,
+      "day": 5,
+      "phase": 1,
+      "story": "free",
+      "appointments": 0,
+      "treatments": 0,
+      "followups": 0
+    }
+  },
+  "import_saved": 5,
+  "backup_exists": true,
+  "errors": [],
+  "mobile_overflow": false,
+  "actual_localstorage_reload": "NOT VERIFIED: browser URL navigation blocked by administrator",
+  "legacy_restore_scope": "approved import function verified with mock storage; not persistent browser",
+  "booking_scope": "appointment fixture; treatment and follow-up via real UI button"
+}

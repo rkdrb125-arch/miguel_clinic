@@ -1,0 +1,147 @@
+{
+  "regression": [
+    {
+      "name": "저장 키",
+      "pass": true
+    },
+    {
+      "name": "저장 버전",
+      "pass": true
+    },
+    {
+      "name": "구버전 형식",
+      "pass": true
+    },
+    {
+      "name": "구버전 신규 필드 미필수",
+      "pass": true
+    },
+    {
+      "name": "예약 일관성",
+      "pass": true
+    },
+    {
+      "name": "중복 진료",
+      "pass": true
+    },
+    {
+      "name": "완료 기록 누락 감지",
+      "pass": true
+    },
+    {
+      "name": "경제 물자 상한",
+      "pass": true
+    },
+    {
+      "name": "경제 하루 1회",
+      "pass": true
+    },
+    {
+      "name": "경제 자금 부족",
+      "pass": true
+    },
+    {
+      "name": "경제 물자 부족",
+      "pass": true
+    },
+    {
+      "name": "경제 정상 구매",
+      "pass": true
+    },
+    {
+      "name": "경제 상한 직전",
+      "pass": true
+    },
+    {
+      "name": "주민 4편",
+      "pass": true
+    },
+    {
+      "name": "다니엘 4편",
+      "pass": true
+    },
+    {
+      "name": "안전 복원 함수",
+      "pass": true
+    },
+    {
+      "name": "기존 안전 복원",
+      "pass": true
+    },
+    {
+      "name": "예약 접수",
+      "pass": true
+    },
+    {
+      "name": "진료 완료",
+      "pass": true
+    },
+    {
+      "name": "재방문",
+      "pass": true
+    }
+  ],
+  "initial_key": "miguel_clinic_v02",
+  "localStorage_reload": {
+    "pass": false,
+    "before": {
+      "note": "실제 origin 저장소 접근 차단"
+    },
+    "after": {
+      "note": "실제 origin 저장소 접근 차단"
+    }
+  },
+  "legacy_restore": {
+    "result": {
+      "ok": false,
+      "reason": "실제 origin 저장소 차단"
+    },
+    "pass": false
+  },
+  "backup_exists": false,
+  "checked_in": "checked-in",
+  "flow_buttons": [
+    "현재 시간대 예약",
+    "상태 확인 진료",
+    "재방문 확인",
+    "현재 시간대 예약",
+    "상태 확인 진료",
+    "재방문 확인",
+    "현재 시간대 예약",
+    "상태 확인 진료",
+    "재방문 확인",
+    "현재 시간대 예약",
+    "상태 확인 진료",
+    "재방문 확인",
+    "현재 시간대 예약",
+    "상태 확인 진료",
+    "재방문 확인"
+  ],
+  "treatment": {
+    "pass": true,
+    "record": {
+      "day": 9,
+      "choice": "상태 확인",
+      "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다.",
+      "patient": "cactus"
+    }
+  },
+  "function_treatment": true,
+  "followup": {
+    "due": 11,
+    "sourceDay": 9,
+    "choice": "상태 확인",
+    "stage": 0,
+    "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+  },
+  "multi_day_followup": {
+    "due": 11,
+    "sourceDay": 9,
+    "choice": "상태 확인",
+    "stage": 0,
+    "result": "상처 상태와 불편함을 확인하고, 안전한 화분 이동법을 함께 살핀다. 환자는 장갑을 준비하겠다고 약속했다. 선인장과의 평화 협정은 아직 진행 중이다."
+  },
+  "duplicate": true,
+  "mobile_overflow": true,
+  "page_errors": []
+}

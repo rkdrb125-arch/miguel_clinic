@@ -1,0 +1,16 @@
+{
+  "initial_load": true,
+  "appointment": true,
+  "auto_checkin": true,
+  "treatment": true,
+  "followup_created": true,
+  "duplicate_prevented": true,
+  "followup_advance": true,
+  "regression": "20/20",
+  "save_diagnostics": true,
+  "storage_roundtrip_mock": true,
+  "legacy_structure_compatible": true,
+  "mobile_loaded": true,
+  "mobile_horizontal_overflow": false,
+  "browser_errors": []
+}
